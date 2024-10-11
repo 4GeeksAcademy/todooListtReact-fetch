@@ -14,9 +14,19 @@ const Task = ({task, onRemove}) => {
             }} >
  
             <p>{task.label}</p>
-            {(isHovered) && <span onClick={()=>{
+            <button className="btn btn-outline-danger"
+                onClick={()=>{onRemove()}}
+            >
+                <i className="fa fa-trash"></i>
+            </button>
+
+            {/* {(isHovered) && <span onClick={()=>{
                 onRemove()
-            }}><i className="fa-regular fa-trash-can"></i></span>}
+            }}>
+                <i className="fa-regular fa-trash-can">
+                    </i>
+                    </span>} */}
+
             
         </div>
     )
